@@ -1,13 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>intro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">intro</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="intro">
+    <div class="intro__container">
+      <h2 class="intro__title">Movi<span>e+</span></h2>
+      <div class="intro__content">
+        <p class="intro__desc">
+          Welcome to MovieApp - your ultimate destination for all things movies!
+          Whether you're a film enthusiast, a casual viewer, or simply looking
+          for the latest blockbuster, we've got you covered."
+        </p>
+        <ion-buttons class="intro__buttons">
+          <ion-button
+            class="intro__button-signIn"
+            color="dark"
+            routerLink="/login"
+          >
+            Sign In
+          </ion-button>
+          <ion-button class="intro__button-signInGoogle" color="dark">
+            Continue with Google
+            <ion-icon slot="start" name="logo-google"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </div>
 </ion-content>

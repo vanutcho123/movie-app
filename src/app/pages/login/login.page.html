@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="login">
+    <div class="login__container">
+      <div class="login__title">
+        <h3>Welcome Back</h3>
+        <h1>Please Login <br />To Continue</h1>
+      </div>
+      <form action="" class="login_form">
+        <ion-input type="email" placeholder="Email"></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+        <ion-input type="password" placeholder="Password"></ion-input>
+        <ion-button type="submit"> Login </ion-button>
+      </form>
+      <div class="login__redirect">
+        Don't have an account? <a routerLink="/register">SignUp</a>
+      </div>
+    </div>
+  </div>
 </ion-content>

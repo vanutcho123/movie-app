@@ -1,0 +1,83 @@
+ion-content {
+  width: 100%;
+  height: 100vh;
+
+  .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(../../../assets/image/banner.jpg);
+    object-fit: cover;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.5);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    .login__container {
+      z-index: 1;
+      width: 100%;
+      padding: 0 40px;
+      .login__title {
+        width: 100%;
+        color: #fff;
+        h3 {
+          font-size: 20px;
+          color: #e64b4b;
+          font-weight: 700;
+        }
+        h1 {
+          font-size: 2.2rem;
+          font-weight: 500;
+        }
+      }
+      .login_form {
+        margin-top: 70px;
+        ion-input {
+          --background: #fff;
+          --color: #000;
+          --padding-start: 10px;
+          height: 55px;
+          --border-radius: 25px;
+          margin-bottom: 22px;
+          --placeholder-color: #000;
+          overflow: hidden;
+        }
+        ion-button {
+          --background: #e64b4b;
+          --color: #fff;
+          --padding-start: 10px;
+          --border-radius: 25px;
+          --placeholder-color: #000;
+          width: 100%;
+          height: 55px;
+          font-size: 15px;
+          font-weight: 700;
+          margin-bottom: 22px;
+          overflow: hidden;
+        }
+      }
+      .login__redirect {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        a {
+          color: red;
+        }
+      }
+    }
+  }
+}
