@@ -1,0 +1,106 @@
+.discover {
+  .discover__container {
+    padding: 36px 24px;
+    .discover__head {
+      h2 {
+        color: #fff;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.48px;
+      }
+    }
+    .discover__search {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      input {
+        width: 100%;
+        padding: 15px 10px 15px 40px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+        background: #211f30;
+
+        color: #bbb;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 114.286% */
+        letter-spacing: 0.14px;
+      }
+      ion-icon {
+        position: absolute;
+        left: 10px;
+        font-size: 16;
+      }
+    }
+    .discover__filter {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .discover__data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        .discover__card {
+          border-radius: 20px;
+          overflow: hidden;
+          display: block;
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+          }
+          .discover__card-content {
+            padding: 20px;
+            h2 {
+              color: #fff;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              letter-spacing: 0.32px;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+      ion-segment-button::part(indicator-background) {
+        background: #ff8e76;
+      }
+
+      /* Material Design styles */
+      ion-segment-button.md::part(native) {
+        color: #fff;
+      }
+
+      .segment-button-checked.md::part(native) {
+        color: #ff8e76;
+      }
+
+      ion-segment-button.md::part(indicator-background) {
+        height: 5px;
+      }
+
+      /* iOS styles */
+      ion-segment-button.ios::part(native) {
+        color: #ff8e76;
+      }
+
+      .segment-button-checked.ios::part(native) {
+        color: #fff;
+      }
+
+      ion-segment-button.ios::part(indicator-background) {
+        border-radius: 20px;
+      }
+    }
+  }
+}

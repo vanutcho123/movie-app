@@ -1,6 +1,24 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+:root {
+  --ion-color-gradient: #ff8f71;
+  --ion-color-gradient-rgb: 255, 143, 113;
+  --ion-color-gradient-contrast: #000000;
+  --ion-color-gradient-contrast-rgb: 0, 0, 0;
+  --ion-color-gradient-shade: #e07e63;
+  --ion-color-gradient-tint: #ff9a7f;
+}
+
+.ion-color-gradient {
+  --ion-color-base: var(--ion-color-gradient);
+  --ion-color-base-rgb: var(--ion-color-gradient-rgb);
+  --ion-color-contrast: var(--ion-color-gradient-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-gradient-contrast-rgb);
+  --ion-color-shade: var(--ion-color-gradient-shade);
+  --ion-color-tint: var(--ion-color-gradient-tint);
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -153,7 +171,7 @@
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    --ion-background-color: #15141f;
     --ion-background-color-rgb: 0, 0, 0;
 
     --ion-text-color: #ffffff;
@@ -240,4 +258,30 @@ html {
    * https://ionicframework.com/docs/layout/dynamic-font-scaling
    */
   --ion-dynamic-font: var(--ion-default-dynamic-font);
+}
+
+.gradient-text {
+  background: var(
+    --gradient-bg,
+    linear-gradient(244deg, #ff8f71 47.24%, #ef2d1a 120.34%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  color: var(--ion-color-dark);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  margin-bottom: 24px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

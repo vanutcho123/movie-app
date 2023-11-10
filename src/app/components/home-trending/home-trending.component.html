@@ -1,0 +1,21 @@
+<div class="trending">
+  <div class="trending__container">
+    <h2 class="title gradient-text">Trending</h2>
+    <div *ngIf="isLoadingTrending" class="loading-movie" style="height: 320px">
+      <ion-skeleton-text
+        [animated]="true"
+        style="width: 100%; height: 320px"
+      ></ion-skeleton-text>
+    </div>
+    <div *ngIf="!isLoadingTrending" class="trending__content">
+      <swiper-container>
+        <swiper-slide *ngFor="let trending of dataTrending">
+          <app-card-movie
+            [dataMovie]="trending"
+            [dataGenre]="dataGenre"
+          ></app-card-movie>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>

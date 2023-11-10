@@ -1,0 +1,32 @@
+<ion-card
+  class="movieCard ion-no-margin"
+  [routerLink]="'/details/' + 'movie' + '/' + dataMovie.id"
+>
+  <div class="movieCard__img">
+    <img [src]="bareImageUrl + '/w500' + dataMovie.backdrop_path" alt="" />
+    <div class="genre">
+      <span *ngFor="let genre of getGenreTags(dataMovie.genre_ids)">
+        {{ genre }}
+      </span>
+    </div>
+    <div class="circleRating">
+      <app-circle-rating [vote_average]="vote_average"></app-circle-rating>
+    </div>
+  </div>
+  <div class="movieCard__content">
+    <div>
+      <h2 class="movieCard__title">{{ dataMovie.original_title }}</h2>
+      <div class="movieCard__release_date">{{ dataMovie.release_date }}</div>
+    </div>
+    <div class="flex-col">
+      <div class="flex-row">
+        <ion-icon name="star" color="gradient"></ion-icon>
+        <span>{{ dataMovie.vote_count }}</span>
+      </div>
+      <div class="flex-row">
+        <ion-icon name="aperture-outline" color="gradient"></ion-icon>
+        <span>{{ dataMovie.popularity }}</span>
+      </div>
+    </div>
+  </div>
+</ion-card>

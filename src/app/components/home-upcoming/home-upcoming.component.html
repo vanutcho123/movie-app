@@ -1,0 +1,16 @@
+<div class="upcomming">
+  <div class="upcomming__container">
+    <h2 class="title gradient-text">UpComing</h2>
+
+    <div class="upcomming__content">
+      <swiper-container>
+        <swiper-slide *ngFor="let upcoming of dataUpComing">
+          <app-card-movie
+            [dataMovie]="upcoming"
+            [dataGenre]="dataGenre"
+          ></app-card-movie>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>

@@ -7,12 +7,12 @@ ion-content {
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     height: 100%;
     margin: 0;
     padding: 0;
-    background: url(../../../assets/image/banner.jpg);
+    background: url(../../../assets/image/banner.png);
     object-fit: cover;
     position: relative;
     &::after {

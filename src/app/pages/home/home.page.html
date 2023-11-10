@@ -1,13 +1,52 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">home</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="home">
+    <div class="home__container">
+      <div class="home__head">
+        <div class="home__title">
+          <span class="gradient-text">Stream</span>
+          <p>Everywhere</p>
+        </div>
+        <div class="home__image">
+          <img src="../../../assets/image/home.jpg" alt="" />
+          <ion-button class="btn btn-primary home-btn">
+            <ion-icon
+              size="large"
+              name="play-circle"
+              color="gradient"
+            ></ion-icon>
+            <div class="group">
+              <span>Continue Watching</span>
+              <h5>Ready Player one</h5>
+            </div>
+          </ion-button>
+        </div>
+      </div>
+      <div class="home__main">
+        <app-home-trending
+          [dataTrending]="dataTrending"
+          [dataGenre]="dataGenre"
+          [isLoadingTrending]="isLoadingTrending"
+        ></app-home-trending>
+        <!--  -->
+        <app-home-toprated
+          [dataTopRated]="dataTopRated"
+          [dataGenre]="dataGenre"
+          [isLoadingRated]="isLoadingTopRated"
+        ></app-home-toprated>
+        <!--  -->
+        <app-home-popular
+          [dataPopular]="dataPopular"
+          [dataGenre]="dataGenre"
+          [isLoadingPopular]="isLoadingPopular"
+        ></app-home-popular>
+        <!--  -->
+        <app-home-upcoming
+          [dataUpComing]="dataUpComing"
+          [dataGenre]="dataGenre"
+          [isLoadingUpcoming]="isLoadingUpComing"
+        >
+        </app-home-upcoming>
+      </div>
+    </div>
+  </div>
 </ion-content>

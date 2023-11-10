@@ -1,0 +1,15 @@
+<div class="popular">
+  <div class="popular__container">
+    <h2 class="title gradient-text">Popular</h2>
+    <div class="popular__content">
+      <swiper-container>
+        <swiper-slide *ngFor="let popular of dataPopular">
+          <app-card-movie
+            [dataMovie]="popular"
+            [dataGenre]="dataGenre"
+          ></app-card-movie>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>
