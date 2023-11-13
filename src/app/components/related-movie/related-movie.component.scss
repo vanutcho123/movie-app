@@ -1,0 +1,34 @@
+.related__container {
+  padding: 0 0 24px 24px;
+  .related__title {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+  }
+  .related__carousel {
+    .related__card {
+      h3 {
+        color: #fff;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.24px;
+        margin: 10px 0;
+      }
+      p {
+        color: #fff;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.24px;
+        margin: 0;
+      }
+    }
+  }
+}

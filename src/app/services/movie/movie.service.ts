@@ -6,6 +6,8 @@ import { Observable } from 'rxjs';
 import { IRootMovie } from 'src/app/interfaces/movie';
 import { IRootGenre } from 'src/app/interfaces/genre';
 import { IRootDetailMovie } from 'src/app/interfaces/detailMovie';
+import { IRootCredit } from 'src/app/interfaces/credits';
+import { IRootVideos } from 'src/app/interfaces/videos';
 @Injectable({
   providedIn: 'root',
 })
@@ -63,9 +65,31 @@ export class MovieService {
       `${environment.bareUrl}/movie/${id}?api_key=${environment.apiKey}`
     );
   }
+
   getApiDetailTv(id: string | null): Observable<IRootDetailMovie> {
     return this.httpClient.get<IRootDetailMovie>(
       `${environment.bareUrl}/tv/${id}?api_key=${environment.apiKey}`
+    );
+  }
+
+  //
+  getApiSimilar(id: string | null): Observable<IRootMovie> {
+    return this.httpClient.get<IRootMovie>(
+      `${environment.bareUrl}/movie/${id}/similar?api_key=${environment.apiKey}`
+    );
+  }
+
+  getApiCredit(id: string | null): Observable<IRootCredit> {
+    return this.httpClient.get<IRootCredit>(
+      `${environment.bareUrl}/movie/${id}/credits?api_key=${environment.apiKey}`
+    );
+  }
+
+  // Videos
+
+  getApiVideos(id: string | null): Observable<IRootVideos> {
+    return this.httpClient.get<IRootVideos>(
+      `${environment.bareUrl}/movie/${id}/videos?api_key=${environment.apiKey}`
     );
   }
 }

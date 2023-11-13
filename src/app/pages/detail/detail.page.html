@@ -61,6 +61,9 @@
         + '/w500' + dataDetail?.poster_path"
           alt=""
         />
+        <div class="play-video">
+          <ion-icon name="play-circle-outline"></ion-icon>
+        </div>
       </div>
       <div class="detail__content">
         <div class="title">
@@ -81,6 +84,30 @@
             <span>{{dataDetail?.vote_average}}</span>
           </div>
         </div>
+
+        <div class="top-cast">
+          <swiper-container
+            [slidesPerView]="5"
+            [loop]="true"
+            [spaceBetween]="20"
+          >
+            <swiper-slide *ngFor="let item of dataTopCast">
+              <img
+                [src]="bareImageUrl 
+            + '/w500' + item?.profile_path"
+                alt=""
+                style="
+                  height: 50px;
+                  width: 100%;
+                  object-fit: cover;
+                  border-radius: 50%;
+                "
+              />
+              <h5 style="font-size: 12px">{{item.name}}</h5>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+
         <div class="detail-group">
           <div class="release">
             <h5 class="g-title">Release date</h5>
@@ -103,5 +130,11 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="related">
+    <app-related-movie
+      [idMovie]="idMovie"
+      [bareImageUrl]="bareImageUrl"
+    ></app-related-movie>
   </div>
 </ion-content>

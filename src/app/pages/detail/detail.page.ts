@@ -4,6 +4,7 @@ import { MovieService } from '../../services/movie/movie.service';
 import { IRootDetailMovie } from 'src/app/interfaces/detailMovie';
 import { environment } from 'src/environments/environment';
 import { NavController } from '@ionic/angular';
+import { Cast } from 'src/app/interfaces/credits';
 
 @Component({
   selector: 'app-detail',
@@ -14,6 +15,7 @@ export class DetailPage implements OnInit {
   public idMovie!: string | null;
   public type!: string | null;
   public dataDetail?: IRootDetailMovie;
+  public dataTopCast?: Cast[];
   public bareImageUrl = environment.bareImageUrl;
   public isLoading: boolean = false;
   navCtrl: NavController;
@@ -24,7 +26,7 @@ export class DetailPage implements OnInit {
   ) {
     this.navCtrl = navCtrl;
   }
-  ngOnInit() {
+  async ngOnInit() {
     this.route.paramMap.subscribe((params) => {
       this.type = params.get('type');
       this.idMovie = params.get('id');
@@ -34,6 +36,7 @@ export class DetailPage implements OnInit {
         this.getDataTvDetail();
       }
     });
+    this.getDataCredits();
   }
 
   getDataMovieDetail() {
@@ -58,6 +61,23 @@ export class DetailPage implements OnInit {
       this.movieService.getApiDetailTv(this.idMovie).subscribe({
         next: (res) => {
           this.dataDetail = res;
+        },
+        error: () => {
+          this.isLoading = false;
+        },
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
+    }
+  }
+
+  getDataCredits() {
+    if (this.idMovie) {
+      this.isLoading = true;
+      this.movieService.getApiCredit(this.idMovie).subscribe({
+        next: (res) => {
+          this.dataTopCast = res.cast;
         },
         error: () => {
           this.isLoading = false;

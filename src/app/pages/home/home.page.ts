@@ -35,6 +35,7 @@ export class HomePage implements OnInit {
     this.movieService.getApiTrending().subscribe({
       next: (res) => {
         this.dataTrending = res.results;
+        this.isLoadingTrending = false;
       },
       error: () => {
         this.isLoadingTrending = false;

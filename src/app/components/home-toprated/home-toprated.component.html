@@ -7,7 +7,7 @@
         style="width: 100%; height: 320px"
       ></ion-skeleton-text>
     </div>
-    <div class="trending__content" *ngIf="!isLoadingRated">
+    <div class="toprated__content" *ngIf="!isLoadingRated">
       <swiper-container>
         <swiper-slide *ngFor="let toprated of dataTopRated">
           <app-card-movie

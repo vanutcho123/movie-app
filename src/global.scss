@@ -24,3 +24,35 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+swiper-container {
+  --swiper-pagination-color: red;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-color: #fff;
+}
+.gradient-text {
+  background: var(
+    --gradient-bg,
+    linear-gradient(244deg, #ff8f71 47.24%, #ef2d1a 120.34%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  color: var(--ion-color-dark);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  margin-bottom: 24px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

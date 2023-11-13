@@ -10,7 +10,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomePopularComponent } from './home-popular/home-popular.component';
 import { HomeTopratedComponent } from './home-toprated/home-toprated.component';
 import { HomeUpcomingComponent } from './home-upcoming/home-upcoming.component';
+import { RelatedMovieComponent } from './related-movie/related-movie.component';
+import { PlayVideoComponent } from './play-video/play-video.component';
 import { RouterModule } from '@angular/router';
+import { register } from 'swiper/element/bundle';
+
+register();
 @NgModule({
   imports: [
     CommonModule,
@@ -33,6 +38,8 @@ import { RouterModule } from '@angular/router';
     CardMovieComponent,
     CircleRatingComponent,
     HomeUpcomingComponent,
+    RelatedMovieComponent,
+    PlayVideoComponent,
   ],
   exports: [
     HomeTrendingComponent,
@@ -41,6 +48,8 @@ import { RouterModule } from '@angular/router';
     HomePopularComponent,
     HomeTopratedComponent,
     HomeUpcomingComponent,
+    RelatedMovieComponent,
+    PlayVideoComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

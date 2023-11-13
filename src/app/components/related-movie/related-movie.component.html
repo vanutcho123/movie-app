@@ -1,0 +1,35 @@
+<i-content>
+  <div class="related__container">
+    <div class="related__title">Related Movies</div>
+    <div class="related__carousel">
+      <swiper-container
+        [slidesPerView]="3"
+        [loop]="true"
+        [spaceBetween]="10"
+        [pagination]="true"
+        [navigation]="true"
+      >
+        <swiper-slide *ngFor="let item of dataRelated">
+          <div
+            class="related__card"
+            *ngIf="item"
+            [routerLink]="'/details/' + 'movie' + '/' + item.id"
+          >
+            <img
+              [src]="
+                item.backdrop_path
+                  ? bareImageUrl + '/w500' + item.backdrop_path
+                  : 'https://nayemdevs.com/wp-content/uploads/2020/03/default-product-image.png'
+              "
+              alt=""
+            />
+            <h3>{{ item.original_title }}</h3>
+            <p>
+              {{ item.release_date }}
+            </p>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</i-content>

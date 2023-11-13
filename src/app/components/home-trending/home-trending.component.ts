@@ -14,6 +14,6 @@ export class HomeTrendingComponent implements OnInit {
   @Input() isLoadingTrending!: boolean;
 
   ngOnInit() {
-    console.log(this.isLoadingTrending);
+    console.log(this.dataTrending);
   }
 }
