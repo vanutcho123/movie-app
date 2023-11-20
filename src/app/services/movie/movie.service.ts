@@ -8,6 +8,7 @@ import { IRootGenre } from 'src/app/interfaces/genre';
 import { IRootDetailMovie } from 'src/app/interfaces/detailMovie';
 import { IRootCredit } from 'src/app/interfaces/credits';
 import { IRootVideos } from 'src/app/interfaces/videos';
+import { IRootObjectSearch } from 'src/app/interfaces/search';
 @Injectable({
   providedIn: 'root',
 })
@@ -90,6 +91,16 @@ export class MovieService {
   getApiVideos(id: string | null): Observable<IRootVideos> {
     return this.httpClient.get<IRootVideos>(
       `${environment.bareUrl}/movie/${id}/videos?api_key=${environment.apiKey}`
+    );
+  }
+
+  // Search Movie
+  getApiSearchMulti(
+    page = 1,
+    keySearch: string
+  ): Observable<IRootObjectSearch> {
+    return this.httpClient.get<IRootObjectSearch>(
+      `${environment.bareUrl}/search/multi?query=${keySearch}&page=${page}&api_key=${environment.apiKey}`
     );
   }
 }

@@ -96,9 +96,7 @@ export class HomePage implements OnInit {
       next: (res) => {
         this.dataGenre = res.genres;
       },
-      error: (err) => {
-        console.log(err);
-      },
+      error: () => {},
     });
   }
 }

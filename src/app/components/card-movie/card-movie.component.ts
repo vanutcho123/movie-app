@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IGenre } from 'src/app/interfaces/genre';
 import { IResultMovie } from 'src/app/interfaces/movie';
+import { IResultSearch } from 'src/app/interfaces/search';
 import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-card-movie',
@@ -10,8 +11,9 @@ import { environment } from 'src/environments/environment';
 export class CardMovieComponent implements OnInit {
   bareImageUrl: string = '';
   @Input() isLoading: boolean | undefined;
-  @Input() dataMovie!: IResultMovie;
+  @Input() dataMovie!: IResultMovie | IResultSearch;
   @Input() dataGenre!: IGenre[];
+  @Input() search: boolean = false;
   vote_average!: number;
   constructor() {}
 

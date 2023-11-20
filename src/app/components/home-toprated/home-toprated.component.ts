@@ -14,7 +14,5 @@ export class HomeTopratedComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.dataTopRated);
-  }
+  ngOnInit() {}
 }

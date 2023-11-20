@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
+import {
+  InfiniteScrollCustomEvent,
+  IonSearchbar,
+  LoadingController,
+} from '@ionic/angular';
 import { IResultMovie } from 'src/app/interfaces/movie';
 import { MovieService } from 'src/app/services/movie/movie.service';
+import { SearchBarService } from 'src/app/shared/services/searchBar/search-bar.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -19,7 +25,9 @@ export class DiscoverPage implements OnInit {
 
   constructor(
     private movieService: MovieService,
-    private loadingController: LoadingController
+    private loadingController: LoadingController,
+    private router: Router,
+    private searchService: SearchBarService
   ) {}
 
   ngOnInit() {
@@ -86,5 +94,10 @@ export class DiscoverPage implements OnInit {
       this.currentPageTv++;
       this.getDataDiscoverTv(event);
     }
+  }
+
+  handleFocusInputSearch() {
+    this.searchService.isSearchBarFocused = true;
+    this.router.navigate(['/search']);
   }
 }

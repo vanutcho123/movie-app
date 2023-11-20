@@ -17,26 +17,8 @@
       display: flex;
       align-items: center;
       margin-bottom: 24px;
-      input {
-        width: 100%;
-        padding: 15px 10px 15px 40px;
-        border-radius: 20px;
-        outline: none;
-        border: none;
-        background: #211f30;
-
-        color: #bbb;
-
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 16px; /* 114.286% */
-        letter-spacing: 0.14px;
-      }
-      ion-icon {
-        position: absolute;
-        left: 10px;
-        font-size: 16;
+      ion-searchbar {
+        --border-radius: 20px;
       }
     }
     .discover__filter {

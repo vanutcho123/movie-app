@@ -3,6 +3,7 @@
     <div class="related__title">Related Movies</div>
     <div class="related__carousel">
       <swiper-container
+        *ngIf="dataRelated.length >= 3"
         [slidesPerView]="3"
         [loop]="true"
         [spaceBetween]="10"

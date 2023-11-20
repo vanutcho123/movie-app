@@ -13,7 +13,5 @@ export class HomeTrendingComponent implements OnInit {
   @Input() dataGenre!: IGenre[];
   @Input() isLoadingTrending!: boolean;
 
-  ngOnInit() {
-    console.log(this.dataTrending);
-  }
+  ngOnInit() {}
 }

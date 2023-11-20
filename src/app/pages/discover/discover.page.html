@@ -7,8 +7,12 @@
           and more..
         </h2>
         <div class="discover__search">
-          <input type="search" name="" id="" />
-          <ion-icon name="search"></ion-icon>
+          <ion-searchbar
+            class="ion-no-padding"
+            (ionFocus)="handleFocusInputSearch()"
+            color="dark"
+          >
+          </ion-searchbar>
         </div>
       </div>
       <div class="discover__filter">
