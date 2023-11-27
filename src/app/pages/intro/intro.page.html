@@ -9,14 +9,13 @@
           for the latest blockbuster, we've got you covered."
         </p>
         <ion-buttons class="intro__buttons">
-          <ion-button
-            class="intro__button-signIn"
-            color="dark"
-            routerLink="/login"
-          >
+          <ion-button class="intro__button-signIn" routerLink="/login">
             Sign In
           </ion-button>
-          <ion-button class="intro__button-signInGoogle" color="dark">
+          <ion-button
+            class="intro__button-signInGoogle"
+            (click)="loginWithGoogle()"
+          >
             Continue with Google
             <ion-icon slot="start" name="logo-google"></ion-icon>
           </ion-button>

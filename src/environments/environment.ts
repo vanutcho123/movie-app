@@ -2,7 +2,9 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
+import { IEnvironment } from 'src/app/interfaces/enviroments';
+
+export const environment: IEnvironment = {
   production: false,
   bareUrl: 'https://api.themoviedb.org/3',
   bareImageUrl: 'https://image.tmdb.org/t/p',

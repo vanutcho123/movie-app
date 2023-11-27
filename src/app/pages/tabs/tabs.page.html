@@ -14,7 +14,7 @@
         [color]="discover.selected ? 'gradient' : ''"
       ></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="user" #user>
+    <ion-tab-button #user (click)="onShowModalUser()">
       <ion-icon
         size="large"
         [name]="user.selected ? 'person' : 'person-outline'"

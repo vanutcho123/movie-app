@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>User</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-item color="light" class="ion-margin-bottom">
+    <ion-label slot="start">Toggle theme</ion-label>
+    <ion-toggle
+      slot="end"
+      color="dark"
+      (ionChange)="toggleTheme($event)"
+    ></ion-toggle>
+  </ion-item>
+  <ion-item color="light">
+    <ion-label>Logout</ion-label>
+    <ion-buttons>
+      <ion-button fill="outline" color="primary" (click)="logout()"
+        >Logout</ion-button
+      >
+    </ion-buttons>
+  </ion-item>
+</ion-content>

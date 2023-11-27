@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "hainguyen.061001@gmail.com",
+      "password": "$2a$10$phn5J5R62aNSGoFKyXBSx.9NCaeFMwdUXnCQrJ0EkL5stP2c6N8nO",
+      "username": "dưdư",
+      "id": 1
+    },
+    {
+      "email": "nguyenvana@gmail.com",
+      "password": "$2a$10$Ez7sS0Nx7Iqnq0SVrAF3Lu8a1q5RpejHg7eT8FFqYG602q0I5gzeS",
+      "username": "dư",
+      "id": 2
+    }
+  ]
+}

@@ -7,6 +7,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginPageModule } from './pages/login/login.module';
+import { RegisterPageModule } from './pages/register/register.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    LoginPageModule,
+    RegisterPageModule,
     // Specify ng-circle-progress as an import
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

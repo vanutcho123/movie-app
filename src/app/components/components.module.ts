@@ -14,6 +14,7 @@ import { RelatedMovieComponent } from './related-movie/related-movie.component';
 import { PlayVideoComponent } from './play-video/play-video.component';
 import { RouterModule } from '@angular/router';
 import { register } from 'swiper/element/bundle';
+import { ModalUserComponent } from './modal-user/modal-user.component';
 
 register();
 @NgModule({
@@ -40,6 +41,7 @@ register();
     HomeUpcomingComponent,
     RelatedMovieComponent,
     PlayVideoComponent,
+    ModalUserComponent,
   ],
   exports: [
     HomeTrendingComponent,
@@ -50,6 +52,7 @@ register();
     HomeUpcomingComponent,
     RelatedMovieComponent,
     PlayVideoComponent,
+    ModalUserComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
